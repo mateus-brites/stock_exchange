@@ -1,6 +1,7 @@
 import { inject, injectable } from "tsyringe";
-import { ICreate, IUsersRepository } from "../Repositories/IUsersRepository";
-import { User } from "../entities/User";
+import { ICreate, IUsersRepository } from "../../Repositories/IUsersRepository";
+import { User } from "modules/user/entities/User"
+
 
 @injectable()
 class CreateUserUseCase {
@@ -14,7 +15,6 @@ class CreateUserUseCase {
 
         return user;
     }
-
 }
 
 export { CreateUserUseCase }
