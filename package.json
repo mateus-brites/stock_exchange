@@ -4,7 +4,7 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "dev": "ts-node-dev --transpile-only --ignore-watch node_modules --respawn src/server.ts",
+    "dev": "ts-node-dev -r tsconfig-paths/register --inspect --transpile-only --ignore-watch node_modules --respawn src/server.ts",
     "typeorm": "ts-node-dev ./node_modules/typeorm/cli",
     "test": "NODE_ENV=test jest"
   },
@@ -13,10 +13,12 @@
     "@types/jest": "^27.0.0",
     "@types/uuid": "^8.3.1",
     "nodemon": "^2.0.12",
+    "tsconfig-paths": "^3.10.1",
     "typescript": "^4.3.5"
   },
   "dependencies": {
     "express": "^4.17.1",
+    "express-async-errors": "^3.1.1",
     "jest": "^27.0.6",
     "reflect-metadata": "^0.1.13",
     "sqlite3": "^5.0.2",

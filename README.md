@@ -6,7 +6,7 @@
 
 [X] Não deve ser possível criar um usuário com o mesmo username
 
-[ ] Não deve ser possível criar um usuário com o mesmo email
+[X] Não deve ser possível criar um usuário com o mesmo email
 
 ---
 
