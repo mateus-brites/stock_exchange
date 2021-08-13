@@ -9,7 +9,8 @@ interface ICreate {
 }
 
 interface IUsersRepository {
-    create({amount, email, password, username, admin}: ICreate): Promise<User>
+    create({amount, email, password, username, admin}: ICreate): Promise<User>;
+    findByName(username: string): Promise<User>;
 }
 
 export { IUsersRepository, ICreate };

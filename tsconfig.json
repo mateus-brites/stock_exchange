@@ -5,13 +5,10 @@
 
     "outDir": "./dist",
 
-    "strict": false,
-
-    "strictPropertyInitialization": false,
-
     "baseUrl": "./src",
     "paths": {
-      "@modules/*": ["modules/*"]
+      "@modules/*": ["modules/*"],
+      "@errors/*": ["errors/*"]
     },
 
     "esModuleInterop": true,

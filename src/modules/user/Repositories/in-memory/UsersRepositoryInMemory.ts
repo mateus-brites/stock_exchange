@@ -3,6 +3,7 @@ import { ICreate, IUsersRepository } from "../IUsersRepository";
 
 
 class UsersRepositoryInMemory implements IUsersRepository {
+    
     private repository: User[] = []
 
     async create({ amount, email, password, username, admin }: ICreate): Promise<User> {
@@ -19,6 +20,10 @@ class UsersRepositoryInMemory implements IUsersRepository {
         this.repository.push(user);
 
         return user;
+    }
+
+    async findByName(username: string): Promise<User> {
+        return this.repository.find((user) => user.username === username);
     }
 }
 

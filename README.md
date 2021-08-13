@@ -4,7 +4,7 @@
 
 [X] Deve ser possível criar um usuário
 
-[ ] Não deve ser possível criar um usuário com o mesmo username
+[X] Não deve ser possível criar um usuário com o mesmo username
 
 [ ] Não deve ser possível criar um usuário com o mesmo email
 
