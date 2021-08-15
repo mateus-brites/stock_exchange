@@ -14,9 +14,9 @@
 
 ## Criação
 
-[ ] Deve ser possível criar uma empresa
+[X] Deve ser possível criar uma empresa
 
-[ ] Não deve ser possível criar uma empresa se o nome ja existe
+[X] Não deve ser possível criar uma empresa se o nome ja existe
 
 ---
 
