@@ -2,7 +2,6 @@
 
 interface ICreateExchangesDTO {
     company_name: string;
-    available?: string;
     
 }
 

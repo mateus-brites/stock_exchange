@@ -11,7 +11,7 @@ class CreateUserUseCase {
         private usersRepository: IUsersRepository
     ){}
 
-    async execute({admin, username, password, email, amount}: ICreate): Promise<User>{
+    async execute({admin= false, username, password, email, amount}: ICreate): Promise<User>{
         const findUser = await this.usersRepository.findByName(username);
 
         if(findUser) {

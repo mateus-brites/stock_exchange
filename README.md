@@ -24,6 +24,6 @@
 
 ## Criação
 
-[ ] Deve ser possível criar uma ação
+[X] Deve ser possível criar uma ação
 
 ---

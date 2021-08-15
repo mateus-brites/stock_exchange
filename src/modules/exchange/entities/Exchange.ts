@@ -10,18 +10,22 @@ class Exchange {
     @PrimaryColumn()
     id: string;
 
-    @ManyToOne(() => Company)
-    @JoinColumn({ name: "company_name" })
-    company: Company;
-
     @Column()
     company_name: string;
+
+    @ManyToOne(() => Company)
+    @JoinColumn({ name: 'company_name' })
+    company: Company;
 
     @Column()
     available: boolean;
 
+    @Column()
+    owner: string
+
     @ManyToOne(() => User)
-    owner: User;
+    @JoinColumn({ name: "owner" })
+    user: User;
 
     @CreateDateColumn()
     created_at: Date;
@@ -32,6 +36,10 @@ class Exchange {
     constructor() {
         if(!this.id){
             this.id = uuid_v4();
+        }
+
+        if(!this.available){
+            this.available = true
         }
     }
 }

@@ -1,11 +1,11 @@
-import { Company } from "@modules/company/entities/Company";
 import { ICreateExchangesDTO } from "../dtos/ICreateExchangesDTO";
+import { Exchange } from "../entities/Exchange";
 
 
 interface IExchangesRepository {
-    Create({ company_name, available }: ICreateExchangesDTO): Promise<Company>;
-    findById(id: string): Promise<Company>;
-    findByCompany(company_name: string): Promise<Company[]>;
+    create({ company_name }: ICreateExchangesDTO): Promise<Exchange>;
+    findById(id: string): Promise<Exchange>;
+    findByCompany(company_name: string): Promise<Exchange[]>;
 }
 
-export { Company };
+export { IExchangesRepository };
