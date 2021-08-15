@@ -1,5 +1,5 @@
 import { AppError } from "@/errors/AppError";
-import { CompanyRepositoryInMemory } from "@modules/compani/Repositories/in-memory/CompanyRepositoryInMemory"
+import { CompanyRepositoryInMemory } from "@modules/company/Repositories/in-memory/CompanyRepositoryInMemory"
 import { CreateCompanyUseCase } from "./CreateCompanyUseCase"
 
 

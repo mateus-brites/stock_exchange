@@ -1,6 +1,6 @@
 import { AppError } from "@/errors/AppError";
-import { ICreateCompanyDTO } from "@modules/compani/dtos/ICreateCompanyDTO";
-import { ICompanyRepository } from "@modules/compani/Repositories/ICompanyRepository";
+import { ICreateCompanyDTO } from "@modules/company/dtos/ICreateCompanyDTO";
+import { ICompanyRepository } from "@modules/company/Repositories/ICompanyRepository";
 import { inject, injectable } from "tsyringe";
 
 

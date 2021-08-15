@@ -1,5 +1,5 @@
-import { ICreateCompanyDTO } from "@modules/compani/dtos/ICreateCompanyDTO";
-import { Company } from "@modules/compani/entities/Company";
+import { ICreateCompanyDTO } from "@modules/company/dtos/ICreateCompanyDTO";
+import { Company } from "@modules/company/entities/Company";
 import { ICompanyRepository } from "../ICompanyRepository";
 
 

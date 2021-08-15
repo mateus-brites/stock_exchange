@@ -1,4 +1,4 @@
-import { CreateCompanyController } from "@modules/compani/useCases/CreateCompany/CreateCOmpanyController";
+import { CreateCompanyController } from "@modules/company/useCases/CreateCompany/CreateCOmpanyController";
 import { Router } from "express";
 
 const companyRoutes = Router()
