@@ -12,9 +12,9 @@
 
 ## Atualização
 
-[ ] Deve ser possível remover um usuário informando seu id
+[X] Deve ser possível remover um usuário informando seu id
 
-[ ] Apenas usuários administradores devem poder remover um usuário
+[X] Apenas usuários administradores devem poder remover um usuário
 
 [ ] O usuário deve poder comprar uma exchange
 
