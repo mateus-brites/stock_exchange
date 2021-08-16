@@ -4,7 +4,6 @@ import { ICreate, IUsersRepository } from "../IUsersRepository";
 
 class UsersRepositoryInMemory implements IUsersRepository {
     
-    
     private repository: User[] = []
 
     async create({ amount, email, password, username, admin }: ICreate): Promise<User> {
@@ -30,6 +29,11 @@ class UsersRepositoryInMemory implements IUsersRepository {
     async findByEmail(email: string): Promise<User> {
         return this.repository.find((user) => user.email === email);
     }
+
+    async findById(id: string): Promise<User> {
+        return this.repository.find((user) => user.id === id);
+    }
+    
 }
 
 export { UsersRepositoryInMemory };

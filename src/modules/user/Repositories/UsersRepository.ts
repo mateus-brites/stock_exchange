@@ -8,6 +8,7 @@ class UsersRepository implements IUsersRepository {
     constructor() {
         this.repository = getRepository(User);
     }
+    
 
     async create({ amount, email, password, username, admin }: ICreate): Promise<User> {
         const user = this.repository.create({amount, admin, password, username, email});
@@ -24,6 +25,12 @@ class UsersRepository implements IUsersRepository {
 
     async findByEmail(email: string): Promise<User> {
         const user =  await this.repository.findOne({ email });
+
+        return user;
+    }
+
+    async findById(id: string): Promise<User> {
+        const user =  await this.repository.findOne({ id });
 
         return user;
     }

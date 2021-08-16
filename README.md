@@ -8,7 +8,7 @@
 
 [X] Não deve ser possível criar um usuário com o mesmo email
 
-[ ] Deve ser possível fazer a autenticação do usuário
+[X] Deve ser possível fazer a autenticação do usuário
 
 ## Atualização
 
@@ -16,7 +16,7 @@
 
 [ ] Apenas usuários administradores devem poder remover um usuário
 
-[ ] O usuário deve poder compara uma exchange
+[ ] O usuário deve poder comprar uma exchange
 
 [ ] O usuário deve poder vender a exchange
 
@@ -36,7 +36,7 @@
 
 [X] Não deve ser possível criar uma empresa se o nome ja existe
 
-[ ] Apenas usuários autenticados devem poder criar empresas
+[X] Apenas usuários autenticados devem poder criar empresas
 
 ## Atualização
 
@@ -52,7 +52,7 @@
 
 [X] Deve ser possível criar uma ação
 
-[ ] Apenas usuários administradores devem poder criar uma ação
+[X] Apenas usuários administradores devem poder criar uma ação
 
 ## Atualização
 
