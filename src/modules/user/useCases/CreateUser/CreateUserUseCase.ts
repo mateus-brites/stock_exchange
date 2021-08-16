@@ -2,6 +2,7 @@ import { inject, injectable } from "tsyringe";
 import { ICreate, IUsersRepository } from "../../Repositories/IUsersRepository";
 import { User } from "modules/user/entities/User"
 import { AppError } from "@/errors/AppError";
+import { hash } from "bcryptjs"
 
 
 @injectable()
@@ -23,7 +24,9 @@ class CreateUserUseCase {
         if(findEmail){
             throw new AppError("Email already exist");
         }
-        const user = await this.usersRepository.create({admin, username, password, email, amount});
+
+        const passwordHashed = await hash(password, 8);
+        const user = await this.usersRepository.create({admin, username, password: passwordHashed, email, amount});
 
         return user;
     }
