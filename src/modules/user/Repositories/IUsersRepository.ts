@@ -13,6 +13,8 @@ interface IUsersRepository {
     findByName(username: string): Promise<User>;
     findByEmail(email: string): Promise<User>;
     findById(id: string): Promise<User>;
+    DellUser(id: string): Promise<void>
+    listAllUsers(): Promise<User[]>;
 }
 
 export { IUsersRepository, ICreate };
