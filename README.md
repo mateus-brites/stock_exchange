@@ -26,7 +26,7 @@ Essa é uma aplicação de compra e venda de ações
 - Rode `yarn typeorm migration:run` para criar as tabelas do banco de dados.
 - Rode o `yarn dev` para iniciar a aplicação.
 
-Por fim, a aplicação estará disponível em `http://localhost:3000`
+Por fim, a aplicação estará disponível em `http://localhost:3333`
 
 ---
 
@@ -94,4 +94,4 @@ Por fim, a aplicação estará disponível em `http://localhost:3000`
 
 ---
 
-Feito por: [mateus-brites]("https://github.com/mateus-brites")
+Feito por: &nbsp;[mateus-brites](https://github.com/mateus-brites)
