@@ -40,6 +40,13 @@ class ExchangesRepository implements IExchangesRepository {
 
     async changeAvailable(id: string): Promise<Exchange> {
         const exchange = await this.repository.findOne(id);
+        if(exchange.available === false){
+            exchange.available = true;
+
+            await this.repository.save(exchange);
+
+            return exchange
+        }
 
         exchange.available = false;
 
@@ -54,6 +61,16 @@ class ExchangesRepository implements IExchangesRepository {
         exchange.owner = username;
 
         await this.repository.save(exchange);
+    }
+
+    async findExchangeByUser(company: string, username: string): Promise<Exchange> {
+        const exchange = await this.repository.findOne({
+            where: [
+                {company_name: company, owner: username},
+            ]
+          });
+        
+        return exchange
     }
 }
 

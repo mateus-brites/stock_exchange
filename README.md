@@ -18,7 +18,7 @@
 
 [X] O usuário deve poder comprar uma exchange
 
-[ ] O usuário deve poder vender a exchange
+[X] O usuário deve poder vender a exchange
 
 [X] Ao comprar ou vender uma exchange o saldo do usuário deve ser atualizado
 
@@ -40,9 +40,9 @@
 
 ## Atualização
 
-[ ] Deve ser possível atualizar o exchange_value
+[X] Deve ser possível atualizar o exchange_value
 
-[ ] Apenas usuários administradores devem poder atualizar o exchange_value
+[X] Apenas usuários administradores devem poder atualizar o exchange_value
 
 ---
 
@@ -56,7 +56,7 @@
 
 ## Atualização
 
-[ ] Quando uma ação for vendida ela deve ter o valor de owner atualizado para null e seu available para true
+[X] Quando uma ação for vendida ela deve ter o valor de owner atualizado para null e seu available para true
 
 [X] Quando uma ação for comprada deve ter seu valor de owner atualizado para o nome do comprador e seu available para false
 
