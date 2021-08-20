@@ -1,3 +1,5 @@
+<img src="https://ik.imagekit.io/mbrites/Captura_de_tela_de_2021-08-20_11-58-25_BxSGlCBKq.png?updatedAt=1629471794360">
+
 # Sobre a aplicação
 
 ---
