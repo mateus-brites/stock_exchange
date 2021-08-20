@@ -1,3 +1,33 @@
+# Sobre a aplicação
+
+---
+
+### 💻Projeto
+
+Essa é uma aplicação de compra e venda de ações
+
+---
+
+### 🍃tecnologias:
+
+- [Node.js](https://nodejs.org/en/)
+- [Typescript](https://www.typescriptlang.org/)
+- [Express](https://expressjs.com/pt-br/)
+- [JSONWebToken](https://github.com/auth0/node-jsonwebtoken#readme)
+
+---
+
+## 🚀 Como executar
+
+- Clone o repositório
+- Rode `yarn` para baixar as dependências
+- Rode `yarn typeorm migration:run` para criar as tabelas do banco de dados.
+- Rode o `yarn dev` para iniciar a aplicação.
+
+Por fim, a aplicação estará disponível em `http://localhost:3000`
+
+---
+
 # Usuário
 
 ## Criação
@@ -61,3 +91,5 @@
 [X] Quando uma ação for comprada deve ter seu valor de owner atualizado para o nome do comprador e seu available para false
 
 ---
+
+Feito por: [mateus-brites]("https://github.com/mateus-brites")
