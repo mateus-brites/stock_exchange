@@ -16,15 +16,15 @@
 
 [X] Apenas usuários administradores devem poder remover um usuário
 
-[ ] O usuário deve poder comprar uma exchange
+[X] O usuário deve poder comprar uma exchange
 
 [ ] O usuário deve poder vender a exchange
 
-[ ] Ao comprar ou vender uma exchange o saldo do usuário deve ser atualizado
+[X] Ao comprar ou vender uma exchange o saldo do usuário deve ser atualizado
 
-[ ] Não deve ser possível comprar uma exchange caso o usuário não tenha saldo suficiente
+[X] Não deve ser possível comprar uma exchange caso o usuário não tenha saldo suficiente
 
-[ ] Apenas usuários autenticados devem poder comprar ou vender uma exchange
+[X] Apenas usuários autenticados devem poder comprar ou vender uma exchange
 
 ---
 
@@ -58,6 +58,6 @@
 
 [ ] Quando uma ação for vendida ela deve ter o valor de owner atualizado para null e seu available para true
 
-[ ] Quando uma ação for comprada deve ter seu valor de owner atualizado para o nome do comprador e seu available para false
+[X] Quando uma ação for comprada deve ter seu valor de owner atualizado para o nome do comprador e seu available para false
 
 ---

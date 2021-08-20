@@ -42,6 +42,13 @@ class UsersRepository implements IUsersRepository {
         const allUsers = await this.repository.find()
         return allUsers;
     }
+
+    async changeAmount(id: string, amount: number): Promise<void> {
+        const user = await this.repository.findOne(id);
+        user.amount = amount;
+
+        await this.repository.save(user);
+    }
 }
 
 export { UsersRepository };

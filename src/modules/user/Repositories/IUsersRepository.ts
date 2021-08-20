@@ -15,6 +15,7 @@ interface IUsersRepository {
     findById(id: string): Promise<User>;
     DellUser(id: string): Promise<void>
     listAllUsers(): Promise<User[]>;
+    changeAmount(id: string, amount: number): Promise<void>;
 }
 
 export { IUsersRepository, ICreate };

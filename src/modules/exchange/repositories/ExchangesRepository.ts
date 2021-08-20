@@ -1,3 +1,4 @@
+import { User } from "@modules/user/entities/User";
 import { getRepository, Repository } from "typeorm";
 import { ICreateExchangesDTO } from "../dtos/ICreateExchangesDTO";
 import { Exchange } from "../entities/Exchange";
@@ -18,11 +19,41 @@ class ExchangesRepository implements IExchangesRepository {
 
         return exchange;
     }
-    findById(id: string): Promise<Exchange> {
-        throw new Error("Method not implemented.");
+    async findById(id: string): Promise<Exchange> {
+        const exchange = await this.repository.findOne(id)
+        return exchange;
     }
-    findByCompany(company_name: string): Promise<Exchange[]> {
-        throw new Error("Method not implemented.");
+    async findByCompany(company_name: string): Promise<Exchange[]> {
+        const exchanges = await this.repository.find({ company_name })
+        return exchanges
+    }
+
+    async findAvailableExchangeByCompany(company: string): Promise<Exchange> {
+        const availableExchange = await this.repository.findOne({
+            where: [
+                {company_name: company, available: 1},
+            ]
+          });
+
+          return availableExchange;
+    }
+
+    async changeAvailable(id: string): Promise<Exchange> {
+        const exchange = await this.repository.findOne(id);
+
+        exchange.available = false;
+
+        await this.repository.save(exchange);
+
+        return exchange
+    }
+
+    async changeOwner(exchange_id: string, username: string): Promise<void> {
+        const exchange = await this.repository.findOne(exchange_id);
+
+        exchange.owner = username;
+
+        await this.repository.save(exchange);
     }
 }
 
