@@ -28,6 +28,8 @@ Essa é uma aplicação de compra e venda de ações
 
 Por fim, a aplicação estará disponível em `http://localhost:3333`
 
+A documentação estará disponível em `http://localhost:3333/api-docs`
+
 ---
 
 # Usuário

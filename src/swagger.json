@@ -1,0 +1,319 @@
+{
+    "openapi": "3.0.0",
+    "infor": {
+        "title": "Exchange-api-docs",
+        "contact": {
+            "email": "mateusmmo15@gmail.com"
+        },
+        "version": "1.0.0"
+    },
+    "servers": [
+        {
+            "url": "http://localhost:3333/",
+            "description": "API de test"
+        }
+    ],
+    "paths": {
+        "/user": {
+            "post": {
+                "tags": ["User"],
+                "summary": "Create a user",
+                "description": "Create a new user",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "type": "object",
+                                "properties": {
+                                    "username": {
+                                        "type": "string"
+                                    },
+                                    "email": {
+                                        "type": "string"
+                                    },
+                                    "password": {
+                                        "type": "string"
+                                    },
+                                    "amount": {
+                                        "type": "number"
+                                    },
+                                    "admin": {
+                                        "type": "boolean"
+                                    }
+                                },
+                                "example": {
+                                    "username": "Mateus Brites",
+                                    "email": "mateusmmo15@gmail.com",
+                                    "password": "devJunior",
+                                    "amount": 3500,
+                                    "admin": true
+                                }
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "201": {
+                        "description": "Created"
+                    },
+                    "400": {
+                        "description": "Email or username already exist"
+                    }
+                }
+            }
+        },
+        "/company": {
+            "post": {
+                "tags": ["Company"],
+                "security": [{ "bearerAuth": [] }],
+                "summary": "Create a company",
+                "description": "Create a new company",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/Company"
+                            },
+                            "example": {
+                                "company": "Petrobras",
+                                "exchange_value": 27.49
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "201": {
+                        "description": "Created"
+                    },
+                    "400": {
+                        "description": "company already exist"
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    }
+                }
+            }
+        },
+        "/company/value/{id}": {
+            "patch": {
+                "description": "Alter exchange value",
+                "summary": "Alter exchange value",
+                "tags": ["Company"],
+                "security": [{ "bearerAuth": [] }],
+                "requestBody": {
+                    "content":{
+                        "application/json":{
+                            "schema":{
+                                "type": "object",
+                                "properties":{
+                                    "value": {
+                                        "type": "number"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
+                "parameters": [
+                 {
+                    "name": "id",
+                    "in": "path",
+                    "description": "Company id",
+                    "required": true,
+                    "schema": {
+                        "types": "string"
+                    }
+                }
+            ],
+            "responses": {
+                "200": {
+                    "description": "Sucess"
+                },
+                "400": {
+                    "description": "id not found"
+                },
+                "401": {
+                    "description": "Unauthorized"
+                }
+            }
+            }
+        },
+        "/exchange": {
+            "post": {
+                "description": "Create a exchange",
+                "summary": "Create a exchange",
+                "tags": ["Exchange"],
+                "security": [{ "bearerAuth": [] }],
+                "requestBody": {
+                    "content": {
+                        "application/json":{
+                            "schema": {
+                                "type": "object",
+                                "properties":{
+                                    "company_name": {
+                                        "type": "string"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "201": {
+                        "description": "Created"
+                    },
+                    "400": {
+                        "description": "company not found"
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    }
+                }
+            }
+        },
+        "/user/auth": {
+            "post":{
+                "description": "Login",
+                "summary": "generates a token JWT",
+                "tags": ["User"],
+                "requestBody":{
+                    "content":{
+                        "application/json":{
+                            "schema":{
+                                "type":"object",
+                                "properties":{
+                                    "email": {
+                                        "type": "string"
+                                    },
+                                    "password":{
+                                        "type":"string"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
+                "responses":{
+                    "201":{
+                        "description": "Token created"
+                    },
+                    "400":{
+                        "description": "Email or password incorrect"
+                    }
+                }
+            }
+        },
+        "user/delete/{id}": {
+            "delete": {
+                "description": "Delete a user",
+                "summary": "Delete a user by id",
+                "tags": ["User"],
+                "security": [{ "bearerAuth": [] }],
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "user id",
+                        "required": true,
+                        "schemas":{
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses":{
+                    "200":{
+                        "description": "Deleted"
+                    },
+                    "400": {
+                        "description": "id not found"
+                    },
+                    "401":{
+                        "description": "Unauthorized"
+                    }
+                }
+            }
+        },
+        "/user/buy/exchange/{company_name}": {
+            "patch":{
+                "description": "Buy a exchange",
+                "summary": "Buy a exchange by company name",
+                "tags": ["User"],
+                "security": [{ "bearerAuth": [] }],
+                "parameters": [
+                    {
+                        "name": "company_name",
+                        "in": "path",
+                        "description": "company name",
+                        "required": true,
+                        "schemas":{
+                            "type":"string"
+                        }
+                    }
+                ],
+                "responses":{
+                    "201": {
+                        "description": "Sucess"
+                    },
+                    "400":{
+                        "description": "company not found"
+                    },
+                    "401":{
+                        "description":"Unauthorized"
+                    }
+                }
+            }
+        },
+        "/user/sell/exchange/{company_name}": {
+            "patch":{
+                "description": "Buy a exchange",
+                "summary": "Buy a exchange by company name",
+                "tags": ["User"],
+                "security": [{ "bearerAuth": [] }],
+                "parameters": [
+                    {
+                        "name": "company_name",
+                        "in": "path",
+                        "description": "company name",
+                        "required": true,
+                        "schemas":{
+                            "type":"string"
+                        }
+                    }
+                ],
+                "responses":{
+                    "201": {
+                        "description": "Sucess"
+                    },
+                    "400":{
+                        "description": "company not found"
+                    },
+                    "401":{
+                        "description":"Unauthorized"
+                    }
+                }
+            }
+        }
+    },
+    "components": {
+        "schemas": {
+            "Company": {
+                "type": "object",
+                "properties": {
+                    "company": {
+                        "type": "string"
+                    },
+                    "exchange_valuew": {
+                        "type": "number"
+                    }
+                }
+            }
+        },
+        "securitySchemes": {
+            "bearerAuth": {
+                "type": "http",
+                "scheme": "bearer",
+                "bearerFormat": "JWT"
+            }
+        }
+    }
+}
