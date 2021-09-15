@@ -96,4 +96,4 @@ A documentação estará disponível em `http://localhost:3333/api-docs`
 
 ---
 
-Feito por: &nbsp;[mateus-brites](https://github.com/mateus-brites)
+Feito por:  &nbsp;[mateus-brites](https://github.com/mateus-brites)
