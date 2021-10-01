@@ -25,8 +25,10 @@ Essa é uma aplicação de compra e venda de ações
 
 - Clone o repositório
 - Rode `yarn` para baixar as dependências
+- Rode `docker build -t exchange .` para criar a imagem do docker obs: é preciso ter o docker instalado na sua máquina
+- Rode `docker-compose up` Para criar os containeres obs: é preciso ter o docker-compose instalado na sua máquina
 - Rode `yarn typeorm migration:run` para criar as tabelas do banco de dados.
-- Rode o `yarn dev` para iniciar a aplicação.
+- Rode o `docker-compose start` para iniciar a aplicação.
 
 Por fim, a aplicação estará disponível em `http://localhost:3333`
 
