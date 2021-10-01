@@ -16,6 +16,8 @@ Essa é uma aplicação de compra e venda de ações
 - [Typescript](https://www.typescriptlang.org/)
 - [Express](https://expressjs.com/pt-br/)
 - [JSONWebToken](https://github.com/auth0/node-jsonwebtoken#readme)
+- [Docker](https://www.docker.com/)
+- [Postgres](https://www.postgrescompare.com/)
 
 ---
 

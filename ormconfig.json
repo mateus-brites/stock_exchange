@@ -1,6 +1,10 @@
 {
-    "type": "sqlite",
-    "database": "./src/database/database.sqlite",
+    "type": "postgres",
+    "port": 5432,
+    "host": "localhost",
+    "username": "docker",
+    "password": "exchange",
+    "database": "exchange",
     "migrations": ["./src/database/migrations/*.ts"],
     "entities": ["./src/modules/**/entities/*.ts"],
     "cli": {

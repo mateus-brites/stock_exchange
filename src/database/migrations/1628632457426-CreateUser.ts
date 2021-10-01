@@ -33,7 +33,7 @@ export class CreateUser1628632457426 implements MigrationInterface {
                     },
                     {
                         name: "amount",
-                        type: "number",
+                        type: "numeric",
                     },
                     {
                         name: "created_at",

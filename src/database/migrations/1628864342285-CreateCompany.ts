@@ -19,7 +19,7 @@ export class CreateCompany1628864342285 implements MigrationInterface {
                     },
                     {
                         name: "exchange_value",
-                        type: "number",
+                        type: "numeric",
                     },
                     {
                         name: "created_at",
