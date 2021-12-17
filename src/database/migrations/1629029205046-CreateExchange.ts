@@ -29,10 +29,12 @@ export class CreateExchange1629029205046 implements MigrationInterface {
                     {
                         name: "created_at",
                         type: "timestamp", 
+                        default: "now()"
                     },
                     {
                         name: "updated_at",
                         type: "timestamp", 
+                        default: "now()"
                     }
                 ],
                 foreignKeys: [

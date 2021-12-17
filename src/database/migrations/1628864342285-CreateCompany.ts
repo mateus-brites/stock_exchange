@@ -24,10 +24,12 @@ export class CreateCompany1628864342285 implements MigrationInterface {
                     {
                         name: "created_at",
                         type: "timestamp",
+                        default: "now()",
                     },
                     {
                         name: "updated_at",
                         type: "timestamp",
+                        default: "now()",
                     },
                 ],
             })
