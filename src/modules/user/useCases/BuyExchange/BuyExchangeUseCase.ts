@@ -42,7 +42,7 @@ class BuyExchangeUseCase {
         
         
 
-        if(user.amount < company.exchange_value){
+        if(Number(user.amount) < Number(company.exchange_value)){
             throw new AppError("insufficient funds")
         }
 

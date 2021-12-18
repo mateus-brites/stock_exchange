@@ -234,7 +234,7 @@
             }
         },
         "/user/buy/exchange/{company_name}": {
-            "patch":{
+            "post":{
                 "description": "Buy a exchange",
                 "summary": "Buy a exchange by company name",
                 "tags": ["User"],
@@ -264,7 +264,7 @@
             }
         },
         "/user/sell/exchange/{company_name}": {
-            "patch":{
+            "post":{
                 "description": "Buy a exchange",
                 "summary": "Buy a exchange by company name",
                 "tags": ["User"],

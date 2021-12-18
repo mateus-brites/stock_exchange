@@ -18,7 +18,7 @@ const sellExchangeController = new SellExchangeController();
 userRoutes.post("/", createUserController.handle);
 userRoutes.post("/auth", authenticateUserController.handle);
 userRoutes.delete("/delete/:id", ensureAuthenticate, ensureAdmin, dellUserController.hanlde)
-userRoutes.put("/buy/exchange/:company_name", ensureAuthenticate, buyExchangeController.handle);
-userRoutes.put("/sell/exchange/:company_name", ensureAuthenticate, sellExchangeController.handle);
+userRoutes.post("/buy/exchange/:company_name", ensureAuthenticate, buyExchangeController.handle);
+userRoutes.post("/sell/exchange/:company_name", ensureAuthenticate, sellExchangeController.handle);
 
 export { userRoutes }
